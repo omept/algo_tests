@@ -8,6 +8,6 @@ try:
 
     print("Total sum of numbers from 0 to ", rangeMax, " is ", numSum)
 except ValueError:
-    print("Invalid number")
+    print("Invalid number.")
 except:
     print("Error occured.")
