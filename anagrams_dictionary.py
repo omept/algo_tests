@@ -5,6 +5,10 @@ def anagram(firstText, secondText):
 
     count = {}
 
+    #check length of s1 and s2
+    if len(s1) != len(s2):
+        return False
+
     # count the number of character occurances in s1
     for cht in s1:
         if cht in count:
