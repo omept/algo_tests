@@ -11,34 +11,39 @@ would return two pairs:
 (2,2)
 """
 
-seen = []
-pairBlocs = []
-
-print("Insert comma separated values for array: \n")
-arr = input().split(",")
+# begin pair sum
 
 
-print("Insert pair sum: \n")
-pairSum = int(input("Insert pair sum: \n"))
+def pair_sum(arr, pairSum):
+    seen = []
+    pairBlocs = []
+    if len(arr) < 2:
+        print("Invalid array")
+        return False
 
+    for val in arr:
+        val = int(val)
+        target = pairSum - val
 
-if len(arr) < 2:
-    print("Invalid array")
-    exit()
+        if target in seen:
+            pairBlocs.append((min(val, target), max(val, target)))
+            seen.remove(target)
+        else:
+            seen.append(val)
 
-for val in arr:
-    val = int(val)
-    target = pairSum - val
+    print("\nPair sum : ")
 
-    if target in seen:
-        pairBlocs.append((min(val, target), max(val, target)))
-        seen.remove(target)
+    if len(pairBlocs) > 0:
+        print("\n".join(map(str, pairBlocs)))
+        return True
     else:
-        seen.append(val)
+        print("\nNo pair found")
+        return False
 
-if len(pairBlocs) > 0:
-    print("\n".join(map(pair, pairBlocs)))
-    exit()
-else:
-    print("No pair found")
-    exit()
+
+# end pair sum function
+
+
+inpArr = input("\nInsert comma separated values for array: \n").split(",")
+inPairSum = int(input("\nInsert pair sum: \n"))
+pair_sum(inpArr, inPairSum)
