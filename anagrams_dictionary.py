@@ -20,7 +20,6 @@ def anagram(firstText, secondText):
             count[cht2] = 1
 
     # all character count must be zero in count dictionary else the anagram equality is false.
-
     for k in count:
         if count[k] > 0:
             return False
