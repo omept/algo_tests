@@ -31,7 +31,7 @@ def reverseWords(message):
 
     # iterate through words and store its reversed
     wordsCount = len(words) - 1
-    for _ in words:
+    while wordsCount >= 0:
         revWords.append(words[wordsCount])
         wordsCount = wordsCount - 1
 
