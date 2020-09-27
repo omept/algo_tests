@@ -3,7 +3,7 @@ def reverseArray(arr):
     arrLen = len(arr) - 1
     # print(arrLen)
     revList = []
-    for _ in arr:
+    while arrLen >= 0:
         revList.append(arr[arrLen])
         arrLen = arrLen - 1
 
