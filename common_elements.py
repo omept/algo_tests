@@ -30,3 +30,4 @@ def commonElements(arr1, arr2):
 
 
 print(commonElements([4, 5, 6, 5, 34, 2, 4], [2, 4]))
+print(commonElements([4, 5, 6, 5, 34, 2, 4], []))
